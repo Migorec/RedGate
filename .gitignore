@@ -1,0 +1,10 @@
+.deps/
+*~
+tex/inc/
+tex/*.aux
+tex/*.bbl
+tex/*.blg
+tex/*.log
+tex/*.out
+tex/*.toc
+tex/*.pdf
