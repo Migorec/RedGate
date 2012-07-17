@@ -1,12 +1,19 @@
 %% Преамбула TeX-файла
 
 % 1. Стиль и язык
-\documentclass[utf8x, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\documentclass[utf8x, 12pt, twoside]{G7-32} % Стиль (по умолчанию будет 14pt)
 
 % Остальные стандартные настройки убраны в preamble-std.tex
 \include{preamble-std}
 
 \begin{document}
+
+\makeatletter
+%\renewcommand{\@oddhead}{\hfill\thepage\hfill}
+\renewcommand{\@oddfoot}{\hfill\thepage}
+\renewcommand{\@evenfoot}{\thepage\hfill}
+
+\makeatother
 
 \frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее
 
@@ -19,7 +26,9 @@
 
 \include{title}
 
-здесь начнется следующая страница
+\include{foreword}
+
+\include{mainPart}
 \mainmatter % это включает нумерацию глав и секций в документе ниже
 
 
