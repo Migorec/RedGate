@@ -42,7 +42,10 @@ $(DEPS)/%-deps.mk: $(TEX)/% Makefile
 	mkdir -p $(DEPS)
 	(echo -n "$(PDF): " ; $(TD) -print=fi -format=1 $< | grep -v '^#' | xargs echo) > $@
 
-$(PDF): $(TEX)/$(MAINTEX).tex $(STYLES) $(BIBFILE)
+tex/inc/menshekovy.pdf: tex/menshekovy.tex $(STYLES)
+	cd tex && $(PDFLATEX) menshekovy.tex && cp menshekovy.pdf inc/
+
+$(PDF): $(TEX)/$(MAINTEX).tex $(STYLES) $(BIBFILE) tex/inc/menshekovy.pdf
 	cd tex && $(PDFLATEX) $(MAINTEX) && $(PDFLATEX) $(MAINTEX) && $(PDFLATEX) $(MAINTEX) && cp $(PDF) ..
 
 $(INC)/dia/%.eps: $(DIA)/%.dia

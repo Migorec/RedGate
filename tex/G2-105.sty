@@ -380,26 +380,31 @@
 
 % Подпись по умолчанию слева (для таблиц, листингов и т.п.)
 \RequirePackage[normal,nooneline]{caption}
+%\RequirePackage{sidecap}
 
 % Длинное тире в качестве разделителя
-\DeclareCaptionLabelSeparator*{emdash}{\space\textemdash\space}
+\DeclareCaptionLabelSeparator*{emdash}{}
 
 % Между подписью и рисунком 10pt
-\captionsetup{labelsep=emdash,aboveskip=10pt,belowskip=0pt,position=bottom}
+\captionsetup{labelsep=emdash,aboveskip=0pt,belowskip=0pt,position=bottom}
 
 % У рисунков вырвнивание по центру
-\captionsetup[figure]{justification=centering}
+%\captionsetup[figure]{justification=left}
 % У таблиц -- слева, зазор 5pt вместо 10
 \captionsetup[table]{position=top,aboveskip=5pt}
 
 \def\fps@figure{bph}
 \def\ftype@figure{1}
 \def\ext@figure{lof}
-\def\fnum@figure{\figurename~\thefigure}
+\def\fnum@figure{}
+
 
 \newcounter{figure}
 \newenvironment{figure} {\@float   {figure}}{\end@float   }
+%\newenvironment{SCfigure} {\@float   {SCfigure}}{\end@float   }
 \newenvironment{figure*}{\@dblfloat{figure}}{\end@dblfloat}
+
+
 
 %  Подпись к рисунку
 \addto\captionsrussian{\def\figurename{{\cyr\CYRR\cyri\cyrs\cyru\cyrn\cyro\cyrk}}}

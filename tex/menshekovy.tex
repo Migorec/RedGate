@@ -1,0 +1,112 @@
+%% Преамбула TeX-файла
+
+% 1. Стиль и язык
+\documentclass[utf8x, 10pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+
+% Остальные стандартные настройки убраны в preamble-std.tex
+\include{preamble-std}
+
+
+
+\begin{document}
+
+
+\makeatletter
+%\renewcommand{\@oddhead}{\hfill\thepage\hfill}
+\renewcommand{\@oddfoot}{\hfill\thepage}
+\renewcommand{\@evenfoot}{\thepage\hfill}
+
+\makeatother
+
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее
+
+% Команды \breakingbeforechapters и \nonbreakingbeforechapters
+% управляют разрывом страницы перед главами.
+% По-умолчанию страница разрывается.
+
+% \nobreakingbeforechapters
+% \breakingbeforechapters
+\thispagestyle{empty} 
+\newgeometry{left=5mm, right=5mm, top=2mm, bottom=0mm}
+
+\begin{figure}[h!]
+    \begin{minipage}[h!]{50mm}
+         \begin{center}
+         \includegraphics[width=35mm]{inc/Menshekovy/11.jpg} 
+         \end{center}
+         \caption{Наша мама~-- Меньшикова (Андреева) Зинаида Борисовна 1905г.р. (??) работник планового управлениия НКПС.}
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{70mm}
+       \includegraphics[width=\linewidth]{inc/Menshekovy/12.jpg} 
+       \caption{Родители на отдыхе в кисловодске.}
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{50mm}
+        \begin{center}
+        \includegraphics[width=35mm]{inc/Menshekovy/13.jpg}
+        \end{center}
+        \caption{Наша папа~-- Меньшиков Василий Алексеевич 1891г.р., выпускник Тимирязевской академии, Главный агроном ОРС Наркомата водного транспорта.}
+    \end{minipage}
+
+\end{figure}
+\vfill
+\vspace{-20pt}
+\begin{figure}[h!]
+
+    \begin{minipage}[h!]{40mm}
+        \center{\includegraphics[width=\linewidth]{inc/Menshekovy/21.jpg} }
+        \caption{Мы, Таня и Лева, остриженные перед лагерем в 1937г.}
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{90mm}
+       \includegraphics[width=\linewidth]{inc/Menshekovy/22.jpg} 
+       \caption{Наш папа до 95 лет бессменно возглавлял Совет дома у Красных ворот.}
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{45mm}
+        \center{\includegraphics[width=\linewidth]{inc/Menshekovy/23.jpg}}
+        \caption{Мы с подругой на все времена Ксенией Варзар в 1938г.}
+    \end{minipage}
+
+
+\end{figure}
+\vspace{-20pt}
+\vfill
+\begin{figure}[h!]
+
+    \begin{minipage}[h!]{45mm}
+        \center{\includegraphics[width=\linewidth]{inc/Menshekovy/31.jpg}}
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{100mm}
+       \includegraphics[width=\linewidth]{inc/Menshekovy/32.jpg} 
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{45mm}
+        \center{\includegraphics[width=\linewidth]{inc/Menshekovy/33.jpg}}
+    \end{minipage}
+
+    \caption{По сторонам~-- мы с братом в 1953г. Посередине Лева с двумя дочерми Еленой и Ларисой. Рядом с нашей мамой племянница Светлана, дочка Таня (т.е. я) и невестка Ирина.}
+\end{figure}
+
+
+\mainmatter % это включает нумерацию глав и секций в документе ниже
+
+
+
+\backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
+            %% заключение
+
+
+
+\appendix   % Тут идут приложения
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
