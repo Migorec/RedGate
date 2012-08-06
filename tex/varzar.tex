@@ -1,0 +1,165 @@
+%% Преамбула TeX-файла
+
+% 1. Стиль и язык
+\documentclass[utf8x, 12pt]{G7-32a} % Стиль (по умолчанию будет 14pt)
+
+% Остальные стандартные настройки убраны в preamble-std.tex
+\include{preamble-std}
+
+
+
+\begin{document}
+
+
+
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее
+
+% Команды \breakingbeforechapters и \nonbreakingbeforechapters
+% управляют разрывом страницы перед главами.
+% По-умолчанию страница разрывается.
+
+% \nobreakingbeforechapters
+% \breakingbeforechapters
+\thispagestyle{empty} 
+\newgeometry{left=5mm, right=5mm, top=2mm, bottom=0mm}
+
+\begin{figure}[h!]
+    \caption{Один из первопоселенцев Дома Варзар Дмитрий Васильевич преподавал математику в специальной школе при КГБ. Репрессирован в 1934 году. Расстрелян в 1937 году. Реабиллитирован в 1956 году <<за отсутствием состава преступления>>.}
+    \begin{minipage}[h!]{40mm}
+         \vspace{10pt}
+         \begin{center}
+         \vspace{-15pt}
+         \includegraphics[height=40mm]{inc/Varzar/11.jpg} 
+         \end{center}
+         \vspace{-10pt}
+         Ксения и Сева \\Варзар. 1934 г.
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{55mm}
+       \begin{center}
+       \includegraphics[height=50mm]{inc/Varzar/12.jpg} 
+       \end{center}
+       \caption{Наша мама~-- Варзар Евдокия Ивановна. Статистик. 1940 г.}
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{55mm}
+        \begin{center}
+        \includegraphics[height=50mm]{inc/Varzar/13.jpg}
+        \end{center}
+        \caption{Наша папа~-- Варзар Дмитрий Васильевич с сыном. 1925 г.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[h!]{40mm}
+         \vspace{10pt}
+        \begin{center}
+        \includegraphics[height=40mm]{inc/Varzar/14.jpg}
+        \end{center}
+        \vspace{-10pt}
+        \caption{Всеволод (Сева) и Ксения Варзар. \\1982 г.}
+    \end{minipage}
+\end{figure}
+%\vfill
+%vspace{5pt}
+
+\begin{figure}[h!]
+    \begin{minipage}[h!]{50mm}
+         \vspace{10pt}
+         \begin{center}
+         \vspace{-15pt}
+         \includegraphics[height=45mm]{inc/Varzar/21.jpg} 
+         \end{center}
+         \vspace{-10pt}
+         Сева. Инженер-артиллерист. Конец 50-х годов.
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{70mm}
+       \begin{center}
+       \includegraphics[height=45mm]{inc/Varzar/22.jpg} 
+       \end{center}
+       \caption{Евдокия Ивановна ведет занятия Ликбеза.}
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{50mm}
+        \begin{center}
+        \includegraphics[height=45mm]{inc/Varzar/23.jpg}
+        \end{center}
+        \caption{Ксения. Инженер-геолог ГлавАПУ. Конец 50-х годов.}
+    \end{minipage}
+\end{figure}
+
+\vspace{5pt}
+
+\begin{figure}[h!]
+    \begin{minipage}[h!]{61mm}
+         \vspace{10pt}
+         \begin{center}
+         \vspace{-15pt}
+         \includegraphics[width=61mm]{inc/Varzar/31.jpg} 
+         \end{center}
+         \vspace{-10pt}
+         Сева охотник.
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{65mm}
+       \begin{center}
+       \includegraphics[width=70mm]{inc/Varzar/32.jpg} 
+       \end{center}
+       \caption{Юбилей Ксении.}
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{32mm}
+        \begin{center}
+        \includegraphics[width=32mm]{inc/Varzar/33.jpg}
+        \end{center}
+        \caption{Сева рыболов.}
+    \end{minipage}
+\end{figure}
+
+\vspace{5pt}
+
+\begin{figure}[h!]
+    \begin{minipage}[h!]{45mm}
+         \vspace{10pt}
+         \begin{center}
+         \vspace{-15pt}
+         \includegraphics[height=50mm]{inc/Varzar/41.jpg} 
+         \end{center}
+         \vspace{-10pt}
+    \end{minipage}
+    \hfill
+   \begin{minipage}[h]{65mm}
+       \begin{center}
+       \includegraphics[height=50mm]{inc/Varzar/42.jpg} 
+       \end{center}
+   \end{minipage}
+   \hfill
+    \begin{minipage}[h!]{45mm}
+        \begin{center}
+        \includegraphics[height=50mm]{inc/Varzar/43a.jpg}
+        \end{center}
+    \end{minipage}
+    \caption{На войне: от начала до конца.}
+\end{figure}
+
+\vspace{-20pt}
+
+
+\mainmatter % это включает нумерацию глав и секций в документе ниже
+
+
+
+\backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
+            %% заключение
+
+
+
+\appendix   % Тут идут приложения
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

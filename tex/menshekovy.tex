@@ -1,7 +1,7 @@
 %% Преамбула TeX-файла
 
 % 1. Стиль и язык
-\documentclass[utf8x, 10pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\documentclass[utf8x, 12pt]{G7-32a} % Стиль (по умолчанию будет 14pt)
 
 % Остальные стандартные настройки убраны в preamble-std.tex
 \include{preamble-std}
@@ -11,12 +11,6 @@
 \begin{document}
 
 
-\makeatletter
-%\renewcommand{\@oddhead}{\hfill\thepage\hfill}
-\renewcommand{\@oddfoot}{\hfill\thepage}
-\renewcommand{\@evenfoot}{\thepage\hfill}
-
-\makeatother
 
 \frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее
 
@@ -35,7 +29,7 @@
          \vspace{-15pt}
          \includegraphics[width=35mm]{inc/Menshekovy/11.jpg} 
          \end{center}
-         \caption{Наша мама~-- Меньшикова (Андреева) Зинаида Борисовна 1905г.р. счетный работник планового управлениия НКПС.}
+         \caption{Наша мама~-- Меньшикова (Андреева) Зинаида Борисовна 1905г.р. Счетный работник планового управления НКПС.}
     \end{minipage}
     \hfill
    \begin{minipage}[h]{70mm}
@@ -47,21 +41,20 @@
         \begin{center}
         \includegraphics[width=45mm]{inc/Menshekovy/13a.JPG}
         \end{center}
-        \caption{Наша папа~-- Меньшиков Василий Алексеевич 1891г.р., выпускник Тимирязевской академии, Главный агроном ОРС Наркомата водного транспорта.}
+        \caption{Наша папа~-- Меньшиков Василий Алексеевич 1891г.р., выпускник Тимирязевской академии. Главный агроном ОРС Наркомата водного транспорта.}
     \end{minipage}
 
 \end{figure}
 \vfill
-\vspace{-20pt}
+%\vspace{-pt}
+\noindent
 \begin{figure}[h!]
-
-    \begin{minipage}[h!]{40mm}
-        \center{\includegraphics[width=\linewidth]{inc/Menshekovy/21.jpg} }
-        \vspace{-10pt}
+    \begin{minipage}[h!]{45mm}
+        \includegraphics[width=\linewidth]{inc/Menshekovy/men21.JPG}
         \caption{Мы, Таня и Лева, остриженные перед лагерем в 1937г.}
     \end{minipage}
     \hfill
-   \begin{minipage}[h]{90mm}
+   \begin{minipage}[h]{85mm}
        \includegraphics[width=\linewidth]{inc/Menshekovy/22.jpg} 
        \caption{Наш папа до 95 лет бессменно возглавлял Совет дома у Красных ворот.}
    \end{minipage}
@@ -70,10 +63,8 @@
         \center{\includegraphics[width=\linewidth]{inc/Menshekovy/23.jpg}}
         \caption{Мы с подругой на все времена Ксенией Варзар в 1938г.}
     \end{minipage}
-
-
 \end{figure}
-\vspace{-20pt}
+%\vspace{-25pt}
 \vfill
 \begin{figure}[h!]
 

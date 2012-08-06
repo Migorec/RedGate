@@ -122,7 +122,7 @@
 \newcommand\totalbibs   {\ref{reftotalbibs}     }
 
 % 3.6 Абзацный отступ - 15..17 мм
-\setlength\parindent{15mm}
+\setlength\parindent{10mm}
 
 % 4.1.1 - 4.1.6 Деление документа
 
@@ -386,7 +386,7 @@
 \DeclareCaptionLabelSeparator*{emdash}{}
 
 % Между подписью и рисунком 10pt
-\captionsetup{labelsep=emdash,aboveskip=0pt,belowskip=0pt,position=bottom}
+\captionsetup{labelsep=emdash,aboveskip=0pt,belowskip=0pt,position=bottom,font={footnotesize, it}}
 
 % У рисунков вырвнивание по центру
 %\captionsetup[figure]{justification=left}
@@ -450,14 +450,17 @@
 \def\fnum@table{\tablename~\thetable}
 
 %  4.3.4 - 4.1.14 Приложения
+%\RequirePackage{sectsty}
+
 \renewcommand\appendix{\par
  \setcounter{secnumdepth}{4}
  \setcounter{chapter}{0}%
  \EqInChapter\PicInChapter\TableInChapter%
  \gdef\@chapapp{\appendixname}%
- \gdef\thechapter{\@Asbuk\c@chapter}%
- \renewcommand\Gost@ChapterStyle{\cyr\CYRP\cyrr\cyri\cyrl\cyro\cyrzh\cyre\cyrn\cyri\cyre~\Gost@MainChapterStyle}%
+ \gdef\thechapter{\@Roman\c@chapter}%
+ \renewcommand\Gost@ChapterStyle{\raggedleft\cyr\CYRP\CYRR\CYRI\CYRL\CYRO\CYRZH\CYRE\CYRN\CYRI\CYRE~\Gost@MainChapterStyle}%
  \setlength\Gost@ChapterIndent{0mm}%
+% \chapterfont{\raggedleft}
 }
 
 % 4.5 Сноски
